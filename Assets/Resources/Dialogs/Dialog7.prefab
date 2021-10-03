@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4075472515897837250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5732294900086389772}
+  - component: {fileID: -5270473540717922936}
+  m_Layer: 0
+  m_Name: Dialog7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5732294900086389772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5270473540717922936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed1c3d89db15954682e414f59345442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Opening:
+  - Hey! What's your plan for the holiday coming in two months?
+  - "\u563F\uFF01\u4F60\u4E24\u4E2A\u6708\u540E\u7684\u5047\u671F\u51C6\u5907\u505A\u4EC0\u4E48\uFF1F"
+  PlayerResponse1:
+  - I'm going for a helicopter tour at Goatvale, with a bunch of friends. Can't wait!
+  - "\u6211\u8981\u8DDF\u6211\u7684\u4E00\u5E2E\u670B\u53CB\u53BB\u5C71\u7F8A\u8C37\u5F00\u76F4\u5347\u98DE\u673A\uFF0C\u5DF2\u7ECF\u7B49\u4E0D\u53CA\u5566\uFF01"
+  NPCResponse1:
+  - Sounds super exciting!
+  - "\u542C\u8D77\u6765\u8D85\u68D2\u7684\uFF01"
+  PlayerResponse2:
+  - Nothing special. Maybe traveling.
+  - "\u6CA1\u4EC0\u4E48\u7279\u522B\u7684\uFF0C\u4E5F\u5C31\u5230\u54EA\u91CC\u65C5\u6E38\u5427\u3002"
+  NPCResponse2:
+  - Good. Let's get down to business then.
+  - "\u597D\u7684\uFF0C\u90A3\u6211\u4EEC\u73B0\u5728\u8C08\u6B63\u4E8B\u3002"
+  PlayerResponse3:
+  - Videogames.
+  - "\u5B85\u5BB6\u6253\u6E38\u620F\u3002"
+  NPCResponse3:
+  - Oh well...
+  - "\u597D\u5427\u3002"

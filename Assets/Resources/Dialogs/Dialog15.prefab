@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4075472515897837250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5732294900086389772}
+  - component: {fileID: -5270473540717922936}
+  m_Layer: 0
+  m_Name: Dialog15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5732294900086389772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5270473540717922936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed1c3d89db15954682e414f59345442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Opening:
+  - Hi! How was your weekend?
+  - "\u55E8\uFF01\u5468\u672B\u8FC7\u5F97\u600E\u4E48\u6837\uFF1F"
+  PlayerResponse1:
+  - Great! I went for a walk in the forest and saw Mr.Bear catching fish.
+  - "\u68D2\u6781\u4E86\uFF01\u6211\u5728\u68EE\u6797\u91CC\u6563\u4E86\u6B65\u5E76\u4E14\u770B\u89C1\u4E86\u718A\u5148\u751F\u5728\u6293\u9C7C\u3002"
+  NPCResponse1:
+  - Cool. I need to catch up with Mr. Bear.
+  - "\u8D5E\uFF01\u6211\u597D\u4E45\u6CA1\u8DDF\u718A\u5148\u751F\u8054\u7CFB\u4E86\u3002"
+  PlayerResponse2:
+  - Not bad. Got some rest.
+  - "\u8FD8\u597D\u3002\u4F11\u606F\u4E86\u4E00\u9635\u5B50\u3002"
+  NPCResponse2:
+  - Good,
+  - "\u633A\u597D\u3002"
+  PlayerResponse3:
+  - '*Ignore*'
+  - "*\u65E0\u89C6*"
+  NPCResponse3:
+  - Hey I'm talking to you!
+  - "\u5582\uFF01\u6211\u5728\u8DDF\u4F60\u8BF4\u8BDD\u5462\uFF01"

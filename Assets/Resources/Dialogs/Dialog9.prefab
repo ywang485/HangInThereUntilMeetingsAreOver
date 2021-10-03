@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4075472515897837250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5732294900086389772}
+  - component: {fileID: -5270473540717922936}
+  m_Layer: 0
+  m_Name: Dialog9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5732294900086389772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5270473540717922936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075472515897837250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed1c3d89db15954682e414f59345442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Opening:
+  - Hey I need you to help me take care of these documents.
+  - "\u6211\u9700\u8981\u4F60\u5E2E\u6211\u5904\u7406\u8FD9\u4E9B\u6587\u4EF6\u3002"
+  PlayerResponse1:
+  - Sure! No problem!
+  - "\u5F53\u7136\uFF01\u4EA4\u7ED9\u6211\u5427\uFF01"
+  NPCResponse1:
+  - Awesome!
+  - "\u8D5E\uFF01"
+  PlayerResponse2:
+  - Ok but it may take some time. I have all these meetings.
+  - "\u597D\uFF0C\u4F46\u8FD9\u53EF\u80FD\u8981\u82B1\u4E9B\u65F6\u95F4\uFF0C\u6211\u4ECA\u5929\u5F88\u591A\u4F1A\u3002"
+  NPCResponse2:
+  - Please do it at your earliest convenience.
+  - "\u5E0C\u671B\u80FD\u5C3D\u91CF\u5FEB\u70B9\u3002"
+  PlayerResponse3:
+  - Stop bothering me with these tedious work!
+  - "\u522B\u518D\u90A3\u8FD9\u4E9B\u7410\u788E\u7684\u4E8B\u60C5\u70E6\u6211\u4E86\u597D\u5417\uFF01"
+  NPCResponse3:
+  - Oh well maybe I should talk to your boss..
+  - "\u6211\u662F\u4E0D\u662F\u8BE5\u8DDF\u4F60\u9886\u5BFC\u8C08\u8C08...?"
