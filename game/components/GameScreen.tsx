@@ -6,9 +6,10 @@ import HeartIndicator from './HeartIndicator';
 import RelationshipIndicator from './RelationshipIndicator';
 import MeetingCounter from './MeetingCounter';
 import MeetingDisplay from './MeetingDisplay';
+import SchedulePanel from './SchedulePanel';
 
 export default function GameScreen() {
-  const { gameState, toggleLanguage } = useGame();
+  const { gameState, toggleLanguage, playSound } = useGame();
 
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gradient-to-b from-gray-900 to-gray-800">
@@ -21,25 +22,33 @@ export default function GameScreen() {
               : '坚持住！'}
           </h1>
           <button
-            onClick={toggleLanguage}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg transition-colors"
+            onClick={() => {
+              playSound('click');
+              toggleLanguage();
+            }}
+            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 active:scale-95 text-white font-bold rounded-lg transition-all"
           >
             {gameState.language === 'en' ? '中文' : 'English'}
           </button>
         </div>
 
         {/* Game Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Left sidebar - Stats */}
-          <div className="md:col-span-1 flex flex-col gap-4">
-            <HeartIndicator />
-            <RelationshipIndicator />
-            <MeetingCounter />
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Left sidebar - Schedule */}
+          <div className="lg:col-span-1 flex justify-center lg:justify-start">
+            <SchedulePanel />
           </div>
 
           {/* Main content - Meeting */}
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <MeetingDisplay />
+          </div>
+
+          {/* Right sidebar - Stats */}
+          <div className="lg:col-span-1 flex flex-col gap-4">
+            <HeartIndicator />
+            <RelationshipIndicator />
+            <MeetingCounter />
           </div>
         </div>
       </div>
