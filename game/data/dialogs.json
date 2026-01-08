@@ -1,0 +1,632 @@
+[
+  {
+    "id": 1,
+    "opening": {
+      "en": "Hi! How are you today?",
+      "zh": "你好啊！今天过得怎么样？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Awesome! How about you?",
+          "zh": "我感觉棒极了！你呢？"
+        },
+        "npcReaction": {
+          "en": "Cool. I'm doing good.",
+          "zh": "很好，我也不错、"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "I'm hanging in there.",
+          "zh": "我还活着。"
+        },
+        "npcReaction": {
+          "en": "You seem tired.",
+          "zh": "你看起来很累。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "'*Yawn*'",
+          "zh": "*打哈欠*"
+        },
+        "npcReaction": {
+          "en": "Hey I'm talking to you now",
+          "zh": "喂！我跟你说话呢。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "opening": {
+      "en": "Hey! Nice weather today.",
+      "zh": "嘿！今天天气不错呢。"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Absolutely! And seeing you here just made my day even better.",
+          "zh": "没错！看见你更是让我的内心更加阳光灿烂了！"
+        },
+        "npcReaction": {
+          "en": "You're welcome!",
+          "zh": "哈哈说得好！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Yep. Let's get down to business.",
+          "zh": "嗯嗯。那我们谈正事吧。"
+        },
+        "npcReaction": {
+          "en": "Okay.",
+          "zh": "好的。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Who cares about weather.",
+          "zh": "天气关我什么事。"
+        },
+        "npcReaction": {
+          "en": "Umm, okay...",
+          "zh": "好吧..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "opening": {
+      "en": "Hello! How has your day been so far?",
+      "zh": "你好！今天还顺利吗？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Thank you for asking. Everything has been fantastic!",
+          "zh": "谢谢你的关心！一切都超顺利！"
+        },
+        "npcReaction": {
+          "en": "Awesome!",
+          "zh": "赞！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "I'm fine. Let's get down to business.",
+          "zh": "我挺好。现在谈正事吧。"
+        },
+        "npcReaction": {
+          "en": "Okay.",
+          "zh": "好的。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Terrible. Made it even worse that I have to deal with you.",
+          "zh": "糟透了，现在我还得应付你。"
+        },
+        "npcReaction": {
+          "en": "Umm, I guess it's not the best time to talk...",
+          "zh": "好吧...那我先走了。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "opening": {
+      "en": "Hey! I heard from your Boss you are very competent.",
+      "zh": "嘿！你老板说你很能干。"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "He's absolutely right and let me show you how competent I am.",
+          "zh": "老板说的没错，我现在就来给你展示我有多能干。"
+        },
+        "npcReaction": {
+          "en": "Awesome!",
+          "zh": "赞！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "That's nice of him. Let's get down to business.",
+          "zh": "谢谢老板了。现在谈正事吧。"
+        },
+        "npcReaction": {
+          "en": "Okay.",
+          "zh": "好的。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "I have to be or else I get fired.",
+          "zh": "废话，求生欲让我们每个人都很能干。"
+        },
+        "npcReaction": {
+          "en": "Umm, okay.",
+          "zh": "好吧。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "opening": {
+      "en": "Hello! How are you?",
+      "zh": "你好吗？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Great! And you?",
+          "zh": "好极了，你呢？"
+        },
+        "npcReaction": {
+          "en": "I'm fine. Thanks.",
+          "zh": "谢谢，我很好。"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "'I''m fine. '",
+          "zh": "我挺好。"
+        },
+        "npcReaction": {
+          "en": "Good. Let's get down to business then.",
+          "zh": "好的，那我们现在谈正事。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Not like you care anyway.",
+          "zh": "说得好像你真的在乎一样。"
+        },
+        "npcReaction": {
+          "en": "Umm...",
+          "zh": "呃..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "opening": {
+      "en": "I like your hat!",
+      "zh": "你这帽子不错！"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Thank you! It was a gift from one of my old friend.",
+          "zh": "谢谢！这可是我老朋友送给我的。"
+        },
+        "npcReaction": {
+          "en": "Cool.",
+          "zh": "棒！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Oh thanks.",
+          "zh": "谢谢。"
+        },
+        "npcReaction": {
+          "en": "Good. Let's get down to business then.",
+          "zh": "好的，那我们现在谈正事。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "'*Looking at phone*'",
+          "zh": "*玩手机*"
+        },
+        "npcReaction": {
+          "en": "Umm...",
+          "zh": "呃..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "opening": {
+      "en": "Hey! What's your plan for the holiday coming in two months?",
+      "zh": "嘿！你两个月后的假期准备做什么？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "I'm going for a helicopter tour at Goatvale, with a bunch of friends. Can't wait!",
+          "zh": "我要跟我的一帮朋友去山羊谷开直升飞机，已经等不及啦！"
+        },
+        "npcReaction": {
+          "en": "Sounds super exciting!",
+          "zh": "听起来超棒的！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Nothing special. Maybe traveling.",
+          "zh": "没什么特别的，也就到哪里旅游吧。"
+        },
+        "npcReaction": {
+          "en": "Good. Let's get down to business then.",
+          "zh": "好的，那我们现在谈正事。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Videogames.",
+          "zh": "宅家打游戏。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "好吧。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "opening": {
+      "en": "What do you do for hobbies?",
+      "zh": "你有什么兴趣爱好吗？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "I'm taking classes and trying to get a helicopter lisence!",
+          "zh": "我正在上课准备考直升飞机驾照呢！"
+        },
+        "npcReaction": {
+          "en": "Sounds super exciting!",
+          "zh": "听起来超棒的！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Nothing special. Hanging out with friends I guess?",
+          "zh": "没什么特别的，跟朋友聚会这种？"
+        },
+        "npcReaction": {
+          "en": "Good. Let's get down to business then.",
+          "zh": "好的，那我们现在谈正事。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Videogames.",
+          "zh": "宅家打游戏。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "好吧。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "opening": {
+      "en": "Hey I need you to help me take care of these documents.",
+      "zh": "我需要你帮我处理这些文件。"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Sure! No problem!",
+          "zh": "当然！交给我吧！"
+        },
+        "npcReaction": {
+          "en": "Awesome!",
+          "zh": "赞！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Ok but it may take some time. I have all these meetings.",
+          "zh": "好，但这可能要花些时间，我今天很多会。"
+        },
+        "npcReaction": {
+          "en": "Please do it at your earliest convenience.",
+          "zh": "希望能尽量快点。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Stop bothering me with these tedious work!",
+          "zh": "别再那这些琐碎的事情烦我了好吗！"
+        },
+        "npcReaction": {
+          "en": "Oh well maybe I should talk to your boss..",
+          "zh": "我是不是该跟你领导谈谈...?"
+        }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "opening": {
+      "en": "What's your favourite animal?",
+      "zh": "你最喜欢什么动物？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "My favourite animial is standing right in front of me.",
+          "zh": "我最喜欢的动物现在就站在我眼前呢。"
+        },
+        "npcReaction": {
+          "en": "Aww.. thank you!",
+          "zh": "谢谢你！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "I like all of them.",
+          "zh": "我都喜欢。"
+        },
+        "npcReaction": {
+          "en": "You can't like all of them.",
+          "zh": "你怎么能都喜欢呢。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "I like any animal who won't add more meetings to my schedule.",
+          "zh": "我喜欢一切不会给我增加更多会议的动物。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "呃..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "opening": {
+      "en": "Hey friend! Wanna join us for dinner tonight?",
+      "zh": "嘿！今晚跟我们一起吃饭吧！"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Sounds lovely. Do you guys prefer meat or veggies? I'll find a restaurant.",
+          "zh": "赞！你们是食肉派还是食草派？我去预定餐馆！"
+        },
+        "npcReaction": {
+          "en": "Cool. thank you!",
+          "zh": "谢谢你！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Sorry I'd love to go but I'm really tired and I have so much work.",
+          "zh": "抱歉。我真的很想去。但是我晚上要加班。"
+        },
+        "npcReaction": {
+          "en": "Hope you can join us next time!",
+          "zh": "希望下次你能加入我们！"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "'Oh please... that''s off-work time. Would you just leave me alone? '",
+          "zh": "拜托！那是下班时间了，能不能放过我。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "呃..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "opening": {
+      "en": "What's your career plan in our company?",
+      "zh": "你在我司的职业生涯是怎么规划的？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "It may sound a bit ambitious but I'm working hard towards the head of dept. culture",
+          "zh": "虽然听起来有点好高骛远了，但我一直在为成为文化和多样性部长而努力。"
+        },
+        "npcReaction": {
+          "en": "'Awesome! Great answer. '",
+          "zh": "赞！看好你年轻人！"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Well, first I need to not get laid off.",
+          "zh": "我得先看到自己不被裁员才好思考下一步。"
+        },
+        "npcReaction": {
+          "en": "Ah, okay. Good luck.",
+          "zh": "噢噢，那祝你好运。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Not like I wouldn't get laid off if I say something nice here.",
+          "zh": "你说的好像我只要回答好这个问题就不会被裁员似的。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "呃..."
+        }
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "opening": {
+      "en": "Have you heard about what happend to Mrs. Bear yesterday?",
+      "zh": "你听说昨天熊夫人的事情了吗？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Of course. I feel sorry for her but I'm sure she'll find a better lake to catch",
+          "zh": "当然，我为她感到遗憾，不过她肯定能找到更好的抓鱼的地方。"
+        },
+        "npcReaction": {
+          "en": "Right, I hope so.",
+          "zh": "是啊！我也希望是这样。"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "No. Tell me what happened.",
+          "zh": "没有。发生了什么？"
+        },
+        "npcReaction": {
+          "en": "Appearantly in the lake she usually catch fish from, all fish died in one night",
+          "zh": "貌似在她经常抓鱼的小河里，工厂的污水让所有的鱼一夜之间都死了。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "Sorry I'm too burnt out to care about other people.",
+          "zh": "抱歉，我没功夫管别人的闲事。"
+        },
+        "npcReaction": {
+          "en": "Oh well...",
+          "zh": "好吧。"
+        }
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "opening": {
+      "en": "Hi! How was your weekend?",
+      "zh": "嗨！周末过得怎么样？"
+    },
+    "responses": [
+      {
+        "heartCost": -2,
+        "relationshipChange": 5,
+        "playerText": {
+          "en": "Great! I went for a walk in the forest and saw Mr.Bear catching fish.",
+          "zh": "棒极了！我在森林里散了步并且看见了熊先生在抓鱼。"
+        },
+        "npcReaction": {
+          "en": "Cool. I need to catch up with Mr. Bear.",
+          "zh": "赞！我好久没跟熊先生联系了。"
+        }
+      },
+      {
+        "heartCost": -1,
+        "relationshipChange": 0,
+        "playerText": {
+          "en": "Not bad. Got some rest.",
+          "zh": "还好。休息了一阵子。"
+        },
+        "npcReaction": {
+          "en": "Good,",
+          "zh": "挺好。"
+        }
+      },
+      {
+        "heartCost": 1,
+        "relationshipChange": -10,
+        "playerText": {
+          "en": "'*Ignore*'",
+          "zh": "*无视*"
+        },
+        "npcReaction": {
+          "en": "Hey I'm talking to you!",
+          "zh": "喂！我在跟你说话呢！"
+        }
+      }
+    ]
+  }
+]
