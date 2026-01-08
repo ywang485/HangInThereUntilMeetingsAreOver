@@ -1,12 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useGame } from '@/lib/GameContext';
 import { NPCType, getCommunityName, HEARTS_RESTORED_ON_BREAK } from '@/lib/gameLogic';
-import type { DialogResponse } from '@/types';
+import type { DialogResponse, NPC } from '@/types';
+
+// NPC sprite mapping based on Unity's ResourceLibrary
+// NPCSpriteIDs = { [0, 1], [2, 3], [4, 5] } for [Cat, Duck, Squirrel] x [Regular, Important]
+const getNPCSpritePosition = (npc: NPC): { x: number; y: number } => {
+  const spriteId = npc.type * 2 + npc.importance;
+  // NPCs.png is a horizontal sprite sheet with 6 sprites (96px each for a 576px wide image)
+  return {
+    x: spriteId * 96, // Each sprite is 96px wide
+    y: 0,
+  };
+};
 
 export default function MeetingDisplay() {
-  const { gameState, currentMeeting, selectResponse, nextMeeting } = useGame();
+  const { gameState, currentMeeting, selectResponse, nextMeeting, playSound } = useGame();
   const [selectedResponse, setSelectedResponse] = useState<number | null>(null);
   const [showingNPCResponse, setShowingNPCResponse] = useState(false);
 
@@ -30,6 +42,7 @@ export default function MeetingDisplay() {
         </p>
         <button
           onClick={() => {
+            playSound('click');
             nextMeeting();
           }}
           className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
@@ -57,23 +70,38 @@ export default function MeetingDisplay() {
       return;
     }
 
+    playSound('click');
     setSelectedResponse(index);
     selectResponse(index);
     setShowingNPCResponse(true);
   };
 
   const handleNext = () => {
+    playSound('click');
     setSelectedResponse(null);
     setShowingNPCResponse(false);
     nextMeeting();
   };
 
   const communityName = getCommunityName(npc.type, lang);
+  const spritePos = getNPCSpritePosition(npc);
 
   return (
     <div className="flex flex-col gap-6 p-8 bg-gray-800 rounded-lg border-4 border-gray-600">
-      {/* NPC Info */}
-      <div className="text-center">
+      {/* NPC Display */}
+      <div className="flex flex-col items-center gap-4">
+        {/* NPC Sprite */}
+        <div className="relative w-24 h-24 pixel-art">
+          <div
+            className="w-full h-full bg-contain bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/sprites/NPCs.png)',
+              backgroundPosition: `-${spritePos.x}px ${spritePos.y}px`,
+              imageRendering: 'pixelated',
+            }}
+          />
+        </div>
+        {/* NPC Name */}
         <h3 className="text-2xl font-bold text-white">
           {communityName} {npc.importance === 1 ? '⭐' : ''}
         </h3>
@@ -105,20 +133,40 @@ export default function MeetingDisplay() {
                       : 'bg-gray-700 border-gray-600 cursor-not-allowed opacity-50'
                   }`}
                 >
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start gap-3">
                     <p className="text-white flex-1">{response.playerText[lang]}</p>
-                    <span
-                      className={`ml-2 font-bold ${
-                        response.heartCost > 0
-                          ? 'text-green-400'
-                          : response.heartCost < 0
-                          ? 'text-red-400'
-                          : 'text-gray-400'
-                      }`}
-                    >
-                      {heartCostDisplay}
-                      {response.heartCost} ❤️
-                    </span>
+                    <div className="flex items-center gap-1">
+                      {response.heartCost === -2 && (
+                        <Image
+                          src="/sprites/TwoHearts.png"
+                          alt="2 hearts"
+                          width={32}
+                          height={16}
+                          className="pixel-art"
+                        />
+                      )}
+                      {response.heartCost === -1 && (
+                        <Image
+                          src="/sprites/OneHeart.png"
+                          alt="1 heart"
+                          width={16}
+                          height={16}
+                          className="pixel-art"
+                        />
+                      )}
+                      {response.heartCost === 1 && (
+                        <>
+                          <span className="text-green-400 font-bold">+</span>
+                          <Image
+                            src="/sprites/Heart.png"
+                            alt="1 heart"
+                            width={16}
+                            height={16}
+                            className="pixel-art"
+                          />
+                        </>
+                      )}
+                    </div>
                   </div>
                 </button>
               );

@@ -11,6 +11,7 @@ import {
   HEARTS_RESTORED_ON_BREAK,
   MAX_HEARTS,
 } from './gameLogic';
+import { useSound } from './useSound';
 
 interface GameContextType {
   gameState: GameState;
@@ -20,12 +21,14 @@ interface GameContextType {
   resetGame: () => void;
   toggleLanguage: () => void;
   currentMeeting: () => any;
+  playSound: (type: 'click' | 'heartRestored' | 'relationIncreased' | 'relationDecreased') => void;
 }
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
 export function GameProvider({ children }: { children: ReactNode }) {
   const [gameState, setGameState] = useState<GameState>(getInitialGameState());
+  const { playSound } = useSound();
 
   const startGame = useCallback(() => {
     const meetingQueue = createMeetingQueue();
@@ -85,6 +88,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
         relationships: newRelationships,
       }));
 
+      // Play sound effects
+      if (relationshipChange > 0) {
+        playSound('relationIncreased');
+      } else if (relationshipChange < 0) {
+        playSound('relationDecreased');
+      }
+
       // Check win/lose conditions
       setTimeout(() => {
         const { won, winningParty } = checkWinCondition(newRelationships);
@@ -109,7 +119,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }
       }, 100);
     },
-    [gameState, currentMeeting]
+    [gameState, currentMeeting, playSound]
   );
 
   const nextMeeting = useCallback(() => {
@@ -125,6 +135,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         ...prev,
         hearts: newHearts,
       }));
+      playSound('heartRestored');
     }
 
     // Move to next meeting
@@ -145,7 +156,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         currentMeetingIndex: nextIndex,
       }));
     }
-  }, [gameState, currentMeeting]);
+  }, [gameState, currentMeeting, playSound]);
 
   return (
     <GameContext.Provider
@@ -157,6 +168,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         resetGame,
         toggleLanguage,
         currentMeeting,
+        playSound,
       }}
     >
       {children}

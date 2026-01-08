@@ -4,7 +4,7 @@ import React from 'react';
 import { useGame } from '@/lib/GameContext';
 
 export default function MenuScreen() {
-  const { startGame, gameState, toggleLanguage } = useGame();
+  const { startGame, gameState, toggleLanguage, playSound } = useGame();
 
   const title = {
     en: 'Hang In There Until Meetings Are Over',
@@ -66,14 +66,20 @@ export default function MenuScreen() {
         {/* Buttons */}
         <div className="flex flex-col gap-4">
           <button
-            onClick={startGame}
+            onClick={() => {
+              playSound('click');
+              startGame();
+            }}
             className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl rounded-lg transition-colors shadow-lg"
           >
             {startButton[lang]}
           </button>
 
           <button
-            onClick={toggleLanguage}
+            onClick={() => {
+              playSound('click');
+              toggleLanguage();
+            }}
             className="px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg transition-colors"
           >
             {lang === 'en' ? '中文' : 'English'}

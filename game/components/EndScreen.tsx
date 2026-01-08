@@ -5,7 +5,7 @@ import { useGame } from '@/lib/GameContext';
 import { getCommunityName } from '@/lib/gameLogic';
 
 export default function EndScreen() {
-  const { gameState, resetGame } = useGame();
+  const { gameState, resetGame, playSound } = useGame();
   const lang = gameState.language;
   const isWon = gameState.gameStatus === 'won';
 
@@ -96,7 +96,10 @@ export default function EndScreen() {
 
         {/* Play Again Button */}
         <button
-          onClick={resetGame}
+          onClick={() => {
+            playSound('click');
+            resetGame();
+          }}
           className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl rounded-lg transition-colors shadow-lg"
         >
           {playAgainText}
